@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Page02</h2>
+    <p>Title: {{ title }}</p>
+    <!--없는 변수는 렌더링 되징 않는다-->
+    <p>summary: {{ summary }}</p>
+    {% comment %} 없는 변수는 렌더링 되지 않는다 {% endcomment %}
+    {% comment %} 여러 줄 템플릿 주석입니다.
+    템플릿 주석은 rendering 되지 않습니다. {% endcomment %}
+    <p>name: {{ name }}</p>
+    
+</body>
+</html>

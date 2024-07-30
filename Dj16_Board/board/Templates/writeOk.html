@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang = "ko"> 
+    {% if result <= 0 %} 
+    <script>
+        alert("등록 실패");
+        history.back();
+    </script>
+    {%else%}
+    <script>
+        alert("등록 성공");
+        location.href = "/board/detail/{{ post.id }}";
+    </script>
+    {% endif %}
+</html>

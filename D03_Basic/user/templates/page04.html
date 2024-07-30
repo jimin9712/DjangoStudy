@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+    {% comment %}
+        구문: if 변수
+          변수가 '존재'하며, 'not empty' 이어야 <<true>> 다
+          ==, !=, <, >, <=, >=, in, not in, is, and, or, is not  연산자 사용 가능
+    {% endcomment %}
+    <h2>if</h2>
+    {% if team_kim %} {#참인 경우#}
+        <p>team_kim 화이팅!!{{team_kim|length }}명 모두</p> {#리스트에 있는 원소의 개수 알아보기#}
+    {% endif %}
+
+    {% if team_park %} {#거짓인 경우 -> 아에 렌더링 안됨#}
+        <p>team_park 화이팅!!</p>
+    {% endif %}
+
+    {% if ages %} {#거짓인 경우 -> 아에 렌더링 안됨#}
+        <p>ages 화이팅!!</p>
+    {% endif %}
+
+    <hr>
+    <h4>for</h4>
+
+    <ul>
+        {% for name in team_kim %} 
+        <li>{{name}}</li>
+        
+        {% endfor %}
+    </ul>
+    <br>
+    <hr>
+    <ul>
+        {% for e in points%} 
+        <li>{{points}}</li>  
+         {% endfor %}        
+    </ul>
+
+    <ul>
+        {% for x, y in points %} 
+        <li>{{x}}, {{y}}</li>  
+         {% endfor %}        
+    </ul>
+    <br>
+   <table>
+    {% for key, value in info.items %}  
+        <tr>
+            <td>{{key}}</td>
+            <td>{{value}}</td>
+        </tr>
+    {% endfor %}
+   </table>
+
+</body>
+</html>
+
